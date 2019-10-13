@@ -1,6 +1,7 @@
 module Main where
 
-import Lib
+import Replay.Config (initialization)
+import Replay.Run (mainLoop)
 
 main :: IO ()
-main = someFunc
+main = initialization >>= mainLoop
